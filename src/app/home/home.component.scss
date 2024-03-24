@@ -1,0 +1,67 @@
+// home.component.scss
+
+.profile-picture-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col {
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Additional styles for the contact section */
+#contactSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-orange{
+  background-color: orange;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/src/assets/images/bg-image.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(150%); /* Adjust filters as needed */
+  pointer-events: none; /* Ensure the background doesn't block mouse events */
+}
+
+.mat-tab-group-css {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; /* Apply horizontal centering */
+  max-width: 55vw; /* Adjust the max-width as needed */
+}

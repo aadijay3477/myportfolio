@@ -1,0 +1,61 @@
+<!-- home.component.html -->
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+<div body>
+  <div class="hero bg-dark text-white py-5" style="height: 20%;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1>Aaditya Jaiswal</h1>
+          <p class="lead">I'm a passionate developer showcasing my projects and skills.</p>
+          <a routerLink="/projects" class="btn btn-primary">View Projects</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="profile-picture-container">
+            <img src="assets\images\aadi_profile.jpeg" alt="Profile Picture" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about py-5">
+    <div class="container about py-5">
+      <h2>About Me</h2>
+      <p class="lead">I am a skilled Angular developer with experience in building modern web applications. I enjoy
+        solving complex problems and creating engaging user experiences.</p>
+      <p class="lead">Here are some of the technologies I work with:</p>
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-3 mb-3" *ngFor="let technology of technologies">
+          <div class="text-center">
+            <img [src]="technology.icon" [alt]="technology.name" class="img-fluid">
+            <p>{{ technology.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-tab-group class="about py-5 mat-tab-group-css" dynamicHeight dynamicWidth>
+    <mat-tab *ngFor="let tab of tabsContent" label="{{tab.label}}">
+      <div class="container">
+        <div class="tab-content py-5">
+          <h2>{{ tab.label }}</h2>
+          <p *ngFor="let paragraph of tab.content.split('\n')">{{ paragraph }}</p>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<div footer>
+  <div class="contact bg-dark bg-gradient text-white py-5" #contactSection>
+    <div class="container">
+      <p class="lead">Have a project in mind or just want to say hello? Feel free to get in touch!</p>
+      <h2>Contact Me</h2>
+      <div *ngFor="let info of contactInfo">
+        <p>{{ info.label }}: <a href="mailto:{{ info.value }}">{{ info.value }}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
