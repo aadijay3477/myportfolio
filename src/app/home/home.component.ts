@@ -22,9 +22,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   contactInfo = [
-    { label: 'Email', value: 'your.email@example.com' },
-    { label: 'Phone', value: '+1234567890' },
-  ];
+    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/email/email-original.svg', label: 'Email', value: 'your.email@example.com' },
+    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phone/phone-original.svg', label: 'Phone', value: '+1234567890' },
+    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg', label: 'Linkedin', value: 'https://www.linkedin.com/in/aaditya-jaiswal-55a2751aa/' }
+  ];  
 
   tabsContent = [
     {

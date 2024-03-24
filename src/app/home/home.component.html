@@ -54,7 +54,12 @@
       <p class="lead">Have a project in mind or just want to say hello? Feel free to get in touch!</p>
       <h2>Contact Me</h2>
       <div *ngFor="let info of contactInfo">
-        <p>{{ info.label }}: <a href="mailto:{{ info.value }}">{{ info.value }}</a></p>
+        <p>
+          <img [src]="info.icon" width="20" height="20">
+          {{ info.label }}:
+          <a *ngIf="info.label === 'Email'" href="mailto:{{ info.value }}">{{ info.value }}</a>
+          <a *ngIf="info.label !== 'Email'" href="{{ info.value }}">{{ info.value }}</a>
+        </p>
       </div>
     </div>
   </div>
