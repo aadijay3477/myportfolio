@@ -2,7 +2,7 @@
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 <div body>
-  <div class="hero bg-dark text-white py-5" style="height: 20%;">
+  <div class="hero bg-dark text-white py-5" style="height: 10%;">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-8">
@@ -54,8 +54,8 @@
       <p class="lead">Have a project in mind or just want to say hello? Feel free to get in touch!</p>
       <h2>Contact Me</h2>
       <div class="d-flex contact-info">
-        <a class="" *ngFor="let info of contactInfo" (click)="redirectTo(info.value)" style="cursor:pointer;">
-          <img [src]="info.icon" [width]="info.width" [height]="info.height">
+        <a class="" *ngFor="let info of contactInfo" (click)="redirectTo(info.value)" target="_blank" style="cursor:pointer;">
+          <img [src]="info.icon" [class.custom-class-40]="info.label === 'Linkedin' || info.label === 'Email'" [class.phone-class]="info.label === 'Phone'">
         </a>
       </div>
     </div>

@@ -22,9 +22,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   contactInfo = [
-    { height: '40', width: '40', label: 'Linkedin', icon: 'https://img.icons8.com/fluency/40/linkedin.png', value: 'https://www.linkedin.com/in/aaditya-jaiswal-55a2751aa/' },
-    { height: '40', width: '40', label: 'Email', icon: 'https://img.icons8.com/color/40/gmail-new.png', value: 'mailto:aadijay3477@gmail.com' },
-    { height: '35', width: '35', label: 'Phone', icon: 'https://img.icons8.com/flat-round/40/phone.png', value: '1234567890' },
+    { label: 'Linkedin', icon: 'https://img.icons8.com/fluency/40/linkedin.png', value: 'https://www.linkedin.com/in/aaditya-jaiswal-55a2751aa/' },
+    { label: 'Email', icon: 'https://img.icons8.com/color/40/gmail-new.png', value: 'mailto:aadijay3477@gmail.com' },
+    { label: 'Phone', icon: 'https://img.icons8.com/flat-round/40/phone.png', value: '1234567890' },
   ];
 
   tabsContent = [
