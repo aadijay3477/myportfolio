@@ -27,7 +27,7 @@
       <p class="lead">Here are some of the technologies I work with:</p>
       <div class="row justify-content-center">
         <div class="col-6 col-sm-3 mb-3" *ngFor="let technology of technologies">
-          <div class="text-center">
+          <div class="text-center technology-img">
             <img [src]="technology.icon" [alt]="technology.name" class="img-fluid">
             <p>{{ technology.name }}</p>
           </div>
@@ -53,13 +53,10 @@
     <div class="container">
       <p class="lead">Have a project in mind or just want to say hello? Feel free to get in touch!</p>
       <h2>Contact Me</h2>
-      <div *ngFor="let info of contactInfo">
-        <p>
-          <img [src]="info.icon" width="20" height="20">
-          {{ info.label }}:
-          <a *ngIf="info.label === 'Email'" href="mailto:{{ info.value }}">{{ info.value }}</a>
-          <a *ngIf="info.label !== 'Email'" href="{{ info.value }}">{{ info.value }}</a>
-        </p>
+      <div class="d-flex contact-info">
+        <a class="" *ngFor="let info of contactInfo" (click)="redirectTo(info.value)" style="cursor:pointer;">
+          <img [src]="info.icon" [width]="info.width" [height]="info.height">
+        </a>
       </div>
     </div>
   </div>

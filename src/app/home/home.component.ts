@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   contactInfo = [
-    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/email/email-original.svg', label: 'Email', value: 'your.email@example.com' },
-    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phone/phone-original.svg', label: 'Phone', value: '+1234567890' },
-    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg', label: 'Linkedin', value: 'https://www.linkedin.com/in/aaditya-jaiswal-55a2751aa/' }
-  ];  
+    { height: '40', width: '40', label: 'Linkedin', icon: 'https://img.icons8.com/fluency/40/linkedin.png', value: 'https://www.linkedin.com/in/aaditya-jaiswal-55a2751aa/' },
+    { height: '40', width: '40', label: 'Email', icon: 'https://img.icons8.com/color/40/gmail-new.png', value: 'mailto:aadijay3477@gmail.com' },
+    { height: '35', width: '35', label: 'Phone', icon: 'https://img.icons8.com/flat-round/40/phone.png', value: '1234567890' },
+  ];
 
   tabsContent = [
     {
@@ -74,5 +74,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // Adjust background position based on mouse movement
     this.renderer.setStyle(this.contactSectionRef.nativeElement, 'background-position', `${x * 50}% ${y * 50}%`);
+  }
+
+  redirectTo(link: string) {
+    window.location.href = link;
   }
 }
