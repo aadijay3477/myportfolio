@@ -1,17 +1,41 @@
-// home.component.scss
-
 .profile-picture-container {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
+  filter: drop-shadow(0px 0px 10px rgba(255, 159, 67, 0.5));
+}
 
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.anime-profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 16px rgba(255, 159, 67, 0.5);
+}
+
+.technology-img img {
+  border-radius: 50%;
+}
+
+.technology-img{
+  width: fit-content;
+}
+
+.technology-name {
+  margin-top: 5px;
+  color: #ff9f43;
 }
 
 .container {
@@ -37,35 +61,16 @@
   }
 }
 
-/* Additional styles for the contact section */
 #contactSection {
   position: relative;
   overflow: hidden;
 }
 
-.bg-orange {
-  background-color: orange;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("/src/assets/images/bg-image.jpg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(100%) contrast(150%); /* Adjust filters as needed */
-  pointer-events: none; /* Ensure the background doesn't block mouse events */
-}
-
 .mat-tab-group-css {
   display: flex;
   justify-content: center;
-  margin: 0 auto; /* Apply horizontal centering */
-  max-width: 55vw; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  max-width: 55vw;
 }
 
 .contact-info a {
@@ -81,4 +86,63 @@
   height: 34px;
   width: 34px;
   margin-top: 4px;
+}
+
+.anime-theme {
+  font-family: 'Arial', sans-serif;
+}
+
+.anime-hero {
+  background-color: #1f1f1f;
+}
+
+.anime-heading {
+  font-size: 3rem;
+  color: #ff9f43;
+}
+
+.anime-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.anime-about {
+  background-color: #303030;
+}
+
+.anime-tab-group {
+  background-color: #212121;
+}
+
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+  --mdc-tab-indicator-active-indicator-color: #ff9f43;
+  --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
+  --mat-tab-header-pagination-icon-color: black;
+  --mat-tab-header-inactive-label-text-color: white;
+  --mat-tab-header-active-label-text-color: #ff9f43;
+  --mat-tab-header-active-ripple-color: #ff9f43;
+  --mat-tab-header-inactive-ripple-color: #ff9f43;
+  --mat-tab-header-inactive-focus-label-text-color: #c09062;
+  --mat-tab-header-inactive-hover-label-text-color: white;
+  --mat-tab-header-active-focus-label-text-color: #ff9f43;
+  --mat-tab-header-active-hover-label-text-color: #ff9f43;
+  --mat-tab-header-active-focus-indicator-color: #ff9f43;
+  --mat-tab-header-active-hover-indicator-color: #ff9f43;
+}
+
+.anime-footer {
+  background-color: #1f1f1f;
+}
+
+.anime-profile {
+  border-radius: 50%;
+}
+
+.anime-btn {
+  background-color: #ff9f43;
+  border-color: #ff9f43;
+}
+
+.anime-btn:hover {
+  background-color: #ff8000;
 }
