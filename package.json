@@ -1,6 +1,7 @@
 {
   "name": "myportfolio",
   "version": "0.0.0",
+  "postbuild": "node .\\post-build.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
