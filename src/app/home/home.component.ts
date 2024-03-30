@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -56,6 +56,21 @@ export class HomeComponent {
   ];
 
   constructor() { }
+
+  showScrollUpButton: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if ((window.scrollY || document.documentElement.scrollTop || document.body.scrollTop) > 100) {
+      this.showScrollUpButton = true;
+    } else {
+      this.showScrollUpButton = false;
+    }
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   redirectTo(link: string) {
     window.location.href = link;

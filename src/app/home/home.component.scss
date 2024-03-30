@@ -196,3 +196,24 @@
 .anime-btn:hover {
   background-color: #ff8000;
 }
+
+.scroll-up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9f43;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-up-btn:hover {
+  background-color: #ff8000;
+}

@@ -1,5 +1,6 @@
 <!-- home.component.html -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 <div body class="anime-theme" >
   <div class="hero bg-dark text-white py-5 anime-hero">
     <div class="container">
@@ -23,7 +24,7 @@
       <h2 class="anime-heading">About Me</h2>
       <p class="lead anime-text">I am an Angular developer with experience in building modern web applications. I enjoy
         solving complex problems and creating engaging user experiences.</p>
-      <p class="lead anime-text">Here are some of the technologies I work with:</p>
+        <p class="lead anime-text">Here are some of the technologies I work with:</p>
       <div class="row justify-content-center">
         <div class="col-6 col-sm-3 mb-3" *ngFor="let technology of technologies">
           <div class="text-center d-flex align-items-center flex-column">
@@ -36,7 +37,7 @@
       </div>      
     </div>
   </div>  
-
+  
   <mat-tab-group class="about py-5 mat-tab-group-css anime-tab-group" dynamicHeight dynamicWidth>
     <mat-tab *ngFor="let tab of tabsContent" label="{{tab.label}}" class="anime-tab">
       <div class="container">
@@ -47,6 +48,9 @@
       </div>
     </mat-tab>
   </mat-tab-group>
+  <div class="scroll-up-btn" *ngIf="showScrollUpButton" (click)="scrollToTop()">
+    <fa-icon [icon]="['fas', 'arrow-up']"></fa-icon>
+  </div>
 </div>
 
 <div footer class="anime-footer">
