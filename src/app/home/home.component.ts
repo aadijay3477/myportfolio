@@ -1,11 +1,12 @@
 import { Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnDestroy {
   @ViewChild('contactSection') contactSectionRef!: ElementRef<HTMLElement>;
 
   technologies = [
@@ -54,12 +55,13 @@ export class HomeComponent implements OnInit, OnDestroy {
                 Class 12th (ICSE) - 2016-2017`
     }
   ];
-
+  image = '/src/assets/images/yasaka-pagoda-sannen-zaka-street-kyoto-japan.jpg'
   constructor(private renderer: Renderer2) { }
 
-  ngOnInit(): void {
-    // Apply background image to the contact section
-    this.renderer.setStyle(this.contactSectionRef.nativeElement, 'background-image', 'url("/src/assets/images/bg-image.jpg")'); // Replace with your image path
+  ngAfterViewInit(): void {
+    if (this.contactSectionRef) {
+      this.renderer.setStyle(this.contactSectionRef.nativeElement, 'background-image', 'url("/src/assets/images/bg-image.jpg")'); // Replace with your image path
+    }
   }
 
   ngOnDestroy(): void {

@@ -17,9 +17,9 @@ import { CommonModule } from '@angular/common';
     ProjectsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     MatTabsModule,
-    CommonModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'contact', component: ContactComponent },
