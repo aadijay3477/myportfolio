@@ -1,12 +1,11 @@
-import { Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnDestroy {
+export class HomeComponent {
   @ViewChild('contactSection') contactSectionRef!: ElementRef<HTMLElement>;
 
   technologies = [
@@ -30,20 +29,20 @@ export class HomeComponent implements OnDestroy {
 
   tabsContent = [
     {
+      label: 'Work Experience',
+      content: `Current Job Role - DSE@Infosys
+                Recent Project - CN-SCIO
+                Trained on MEAN Stack
+                Above 1.5 years of experience as a UI Developer in Angular
+                Backend Intern - Technical Product Analyst@Juspay`
+    },
+    {
       label: 'Projects and Trainings',
       content: `Movie recommendation project using ML: Created a movie recommendation engine using libraries Numpy,
                 Pandas, Matplotlib, and Sklearn.
                 Candlestick Screener For Stock Using Python: Developed a web-based technical screener for candlestick
                 patterns to predict market movement.
                 Skills: Python, Flask, TA-Lib`
-    },
-    {
-      label: 'Work Experience',
-      content: `Current Job Role - DSE@Infosys
-                Recent Project - CN-SCIO
-                Trained on MEAN Stack
-                More than 1.5 years of experience as a UI Developer in Angular
-                Backend Intern - Technical Product Analyst@Juspay`
     },
     {
       label: 'Educational Background',
@@ -55,28 +54,8 @@ export class HomeComponent implements OnDestroy {
                 Class 12th (ICSE) - 2016-2017`
     }
   ];
-  image = '/src/assets/images/yasaka-pagoda-sannen-zaka-street-kyoto-japan.jpg'
-  constructor(private renderer: Renderer2) { }
 
-  ngAfterViewInit(): void {
-    if (this.contactSectionRef) {
-      this.renderer.setStyle(this.contactSectionRef.nativeElement, 'background-image', 'url("/src/assets/images/bg-image.jpg")'); // Replace with your image path
-    }
-  }
-
-  ngOnDestroy(): void {
-    // Clean up when component is destroyed
-    this.renderer.removeStyle(this.contactSectionRef.nativeElement, 'background-image');
-  }
-
-  @HostListener('mousemove', ['$event'])
-  onMouseMove(event: MouseEvent): void {
-    const x = event.clientX / window.innerWidth;
-    const y = event.clientY / window.innerHeight;
-
-    // Adjust background position based on mouse movement
-    this.renderer.setStyle(this.contactSectionRef.nativeElement, 'background-position', `${x * 50}% ${y * 50}%`);
-  }
+  constructor() { }
 
   redirectTo(link: string) {
     window.location.href = link;

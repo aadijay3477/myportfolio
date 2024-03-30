@@ -25,13 +25,16 @@
   box-shadow: 0 8px 16px rgba(255, 159, 67, 0.5);
 }
 
-.technology-img img {
-  border-radius: 50%;
-}
+// .technology-img img {
+//   border-radius: 50%;
+//   max-width: 100%;
+//   height: auto;
+//   max-height: 50px;
+// }
 
-.technology-img{
-  width: fit-content;
-}
+// .technology-img {
+//   width: fit-content;
+// }
 
 .technology-name {
   margin-top: 5px;
@@ -53,17 +56,12 @@
   text-align: center;
 }
 
-.technology-img {
+.technology-icon {
   img {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
   }
-}
-
-#contactSection {
-  position: relative;
-  overflow: hidden;
 }
 
 .mat-tab-group-css {
@@ -89,14 +87,14 @@
 }
 
 .anime-theme {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   position: relative;
   overflow: hidden;
 }
 
 .anime-theme::before,
 .anime-theme::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -126,8 +124,8 @@
   0% {
     transform: translateX(0);
   }
-  20% {
-    transform: translateX(-20%);
+  10% {
+    transform: translateX(-10%);
   }
 }
 
@@ -135,8 +133,8 @@
   0% {
     transform: translateX(0);
   }
-  20% {
-    transform: translateX(20%);
+  10% {
+    transform: translateX(10%);
   }
 }
 
@@ -155,7 +153,7 @@
 }
 
 .anime-about {
-  background-color: #303030;
+  background-color: #ff9f43;
   width: 65vw;
   align-items: center;
   justify-content: center;
@@ -165,7 +163,8 @@
   background-color: #212121;
 }
 
-.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+.mat-mdc-tab-group,
+.mat-mdc-tab-nav-bar {
   --mdc-tab-indicator-active-indicator-color: #ff9f43;
   --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
   --mat-tab-header-pagination-icon-color: black;
@@ -182,7 +181,7 @@
 }
 
 .anime-footer {
-  background-color: #1f1f1f;
+  background-color: #ff9f43;
 }
 
 .anime-profile {
@@ -196,13 +195,4 @@
 
 .anime-btn:hover {
   background-color: #ff8000;
-}
-
-@keyframes animeBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
 }

@@ -6,7 +6,7 @@
       <div class="row align-items-center">
         <div class="col-md-8">
           <h1 class="anime-heading">Aaditya Jaiswal</h1>
-          <p class="lead anime-text">I'm a passionate developer showcasing my projects and skills.</p>
+          <p class="lead anime-text">I am a passionate developer showcasing my projects and skills.</p>
           <a routerLink="/projects" class="btn btn-primary anime-btn">View Projects</a>
         </div>
         <div class="col-md-4 text-center">
@@ -18,22 +18,22 @@
     </div>
   </div>  
 
-  <div class="about py-5 mx-auto anime-about">
-    <div class="container about py-5">
+  <div class="about py-5 mx-auto bg-gradient anime-about">
+    <div class="container bg-dark bg-gradient about py-5">
       <h2 class="anime-heading">About Me</h2>
-      <p class="lead anime-text">I am a skilled Angular developer with experience in building modern web applications. I enjoy
+      <p class="lead anime-text">I am an Angular developer with experience in building modern web applications. I enjoy
         solving complex problems and creating engaging user experiences.</p>
       <p class="lead anime-text">Here are some of the technologies I work with:</p>
       <div class="row justify-content-center">
         <div class="col-6 col-sm-3 mb-3" *ngFor="let technology of technologies">
-          <div class="text-center technology-img">
+          <div class="text-center d-flex align-items-center flex-column">
             <div class="rounded-circle technology-icon">
               <img [src]="technology.icon" [alt]="technology.name" class="img-fluid anime-profile">
             </div>
             <p class="anime-text technology-name">{{ technology.name }}</p>
           </div>
         </div>
-      </div>
+      </div>      
     </div>
   </div>  
 
@@ -50,7 +50,7 @@
 </div>
 
 <div footer class="anime-footer">
-  <div class="contact bg-dark bg-gradient text-white py-5" #contactSection>
+  <div class="contact bg-dark bg-gradient text-white py-5">
     <div class="container">
       <p class="lead anime-text">Have a project in mind or just want to say hello? Feel free to get in touch!</p>
       <h2 class="anime-heading">Contact Me</h2>
