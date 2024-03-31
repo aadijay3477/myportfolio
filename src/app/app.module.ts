@@ -8,7 +8,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CommonModule } from '@angular/common';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       { path: 'projects', component: ProjectsComponent },
       // Add more routes as needed
       // Redirect any invalid route to the home page
-      { path: '**', redirectTo: '' } 
+      { path: '**', redirectTo: '' }
     ]),
     RouterModule // Make sure RouterModule is included here
   ],
@@ -38,4 +40,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faArrowUp);
+  }
+}

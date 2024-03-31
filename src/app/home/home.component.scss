@@ -206,9 +206,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
   font-size: 20px;
   cursor: pointer;
   z-index: 1000;
