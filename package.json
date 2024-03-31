@@ -1,13 +1,13 @@
 {
   "name": "myportfolio",
   "version": "0.0.0",
-  "postbuild": "node .\\post-build.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postbuild": "node .\\post-build.js"
   },
   "private": true,
   "dependencies": {
