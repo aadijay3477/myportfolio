@@ -8,7 +8,7 @@
         <div class="col-md-8">
           <h1 class="anime-heading">Aaditya Jaiswal</h1>
           <p class="lead anime-text">I am a passionate developer showcasing my projects and skills.</p>
-          <a routerLink="/projects" class="btn btn-primary anime-btn">View Projects</a>
+          <a href="../../assets/resume/Aaditya_Jaiswal_CV.pdf" download="" class="btn btn-primary anime-btn">Download CV</a>
         </div>
         <div class="col-md-4 text-center">
           <div class="profile-picture-container">
@@ -44,10 +44,14 @@
         <div class="tab-content py-5">
           <h2 class="anime-heading">{{ tab.label }}</h2>
           <p *ngFor="let paragraph of tab.content.split('\n')" class="anime-text">{{ paragraph }}</p>
+          <div *ngIf="tab.label === 'Projects and Trainings'">
+            <a routerLink="/projects" class="btn btn-primary anime-btn mt-3">View Projects</a>
+          </div>
         </div>
       </div>
     </mat-tab>
   </mat-tab-group>
+  
   <div class="scroll-up-btn" *ngIf="showScrollUpButton" (click)="scrollToTop()">
     <fa-icon [icon]="['fas', 'arrow-up']"></fa-icon>
   </div>
